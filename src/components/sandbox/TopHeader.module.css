@@ -1,0 +1,142 @@
+.topHeader {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.collapseBtn {
+  font-size: 18px;
+  padding: 0 8px;
+  transition: color 0.3s;
+}
+
+.collapseBtn:hover {
+  color: #1890ff;
+}
+
+.welcomeText {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.actionBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.actionBtn:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-color: #f5222d;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+}
+
+.userAvatarContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.userAvatarContainer:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.role {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.userDropdownMenu {
+  min-width: 200px;
+}
+
+.userInfoDropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.userInfoItem {
+  padding: 0 !important;
+}
+
+.userAvatar {
+  margin-right: 12px;
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.userRole {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.dropdownIcon {
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.logoutContainer {
+  display: flex;
+  align-items: center;
+}

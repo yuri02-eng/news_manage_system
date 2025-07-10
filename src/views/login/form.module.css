@@ -1,0 +1,177 @@
+/* 页面容器样式 */
+.pageContainer {
+    position: relative;
+    background-color: rgba(19, 28, 58, 0.95);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* 登录卡片样式 */
+.formCard {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 2;
+    transform: translateY(-30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 登录表单样式 */
+.loginForm {
+    margin-top: 30px;
+}
+
+/* Logo区域样式 */
+.logoContainer {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.globeIcon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.globeIcon::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="white"/></svg>') center no-repeat;
+}
+
+.systemTitle {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    background: linear-gradient(90deg, #fff, #a9d6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 输入框前缀样式 */
+.inputPrefix {
+    color: rgb(0,0,0,0.4);
+    margin-right: 8px;
+}
+
+/* 输入框样式 */
+.ant-input, .ant-input-affix-wrapper, .ant-input-password {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 8px;
+    color: #fff !important;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.ant-input::placeholder, .ant-input-affix-wrapper .ant-input::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.ant-input:hover,
+.ant-input-affix-wrapper:hover,
+.ant-input-password:hover {
+    border-color: rgba(100, 180, 255, 0.5) !important;
+}
+
+.ant-input:focus,
+.ant-input-focused,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused,
+.ant-input-password:focus {
+    box-shadow: 0 0 0 2px rgba(80, 180, 255, 0.2) !important;
+    border-color: #50b4ff !important;
+}
+
+/* 登录按钮样式 */
+.loginButton {
+    height: 46px;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #1890ff, #00c6ff) !important;
+    border: none !important;
+    transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+/* 记住我复选框样式 */
+.rememberCheckbox {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.rememberCheckbox .ant-checkbox-inner {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 链接样式 */
+.forgotLink, .registerLink {
+    color: #9ecaff !important;
+    transition: all 0.2s ease;
+}
+
+.forgotLink:hover, .registerLink:hover {
+    color: #70bbff !important;
+}
+
+.registerHint {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* 页脚样式 */
+.pageFooter {
+    position: absolute;
+    bottom: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    z-index: 2;
+}
+
+/* 动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+    .formCard {
+        padding: 30px 20px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,90 @@
+/* 添加此CSS以替代-deprecated-ms-high-contrast */
+body {
+  background-color: #f0f2f5;
+  height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  padding: 20px;
+}
+
+.login-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s;
+}
+
+.login-title {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 30px;
+}
+
+.login-form .ant-input {
+  border-radius: 4px;
+}
+
+.login-form .ant-input-affix-wrapper {
+  padding: 10px 15px;
+}
+
+.site-form-item-icon {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.login-options {
+  margin-bottom: 20px;
+}
+
+.login-forgot {
+  color: #1890ff;
+}
+
+.login-button {
+  background-color: #1890ff;
+  border: none;
+  height: 44px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.login-register {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.login-register a {
+  color: #1890ff;
+}
+
+/* 强制颜色模式样式 */
+@media (forced-colors: active) {
+  .login-card {
+    border: 1px solid;
+  }
+
+  .login-button {
+    background-color: Highlight;
+    color: HighlightText;
+    border: 2px solid;
+    border-radius: 4px;
+  }
+
+  .login-forgot, .login-register a {
+    color: LinkText;
+    text-decoration: underline;
+  }
+}

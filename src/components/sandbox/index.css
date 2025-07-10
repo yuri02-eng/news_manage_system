@@ -1,0 +1,39 @@
+.logo {
+    line-height: 32px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* 滚动条容器（包裹Menu的div） */
+.side-menu-scroll {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Firefox滑块+轨道 */
+}
+
+/* Webkit滚动条整体 */
+.side-menu-scroll::-webkit-scrollbar {
+    width: 6px; /* 竖向宽度 */
+    height: 6px; /* 横向宽度 */
+}
+
+/* Webkit滑块 */
+.side-menu-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3); /* 半透明白色 */
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+/* Webkit滑块悬停 */
+.side-menu-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5); /* 提高透明度 */
+}
+
+/* Webkit轨道 */
+.side-menu-scroll::-webkit-scrollbar-track {
+    background: transparent; /* 透明背景 */
+}
