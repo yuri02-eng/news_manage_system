@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# 全球新闻管理系统
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 项目简介
 
-## Available Scripts
+全球新闻管理系统是一个基于React的新闻发布和管理平台，提供了完整的新闻撰写、审核、发布流程，以及用户权限管理功能。系统分为前台新闻展示和后台管理两大部分，支持多角色权限控制，实现了新闻全生命周期的管理。
 
-In the project directory, you can run:
+## 技术栈
 
-### `npm start`
+- **前端框架**：React 18.2.0
+- **UI组件库**：Ant Design 5.26.2
+- **路由管理**：React Router 6.14.2
+- **状态管理**：Redux Toolkit + Redux Persist
+- **HTTP请求**：Axios
+- **富文本编辑**：Draft.js + React Draft WYSIWYG
+- **数据可视化**：ECharts
+- **日期处理**：Moment.js
+- **模拟后端**：JSON Server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 功能特性
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 用户认证与权限管理
+- 用户登录与身份验证
+- 基于角色的权限控制（超级管理员、区域管理员、区域编辑）
+- 动态路由权限控制
 
-### `npm test`
+### 用户管理
+- 用户列表展示与搜索
+- 用户添加、编辑、删除
+- 用户状态管理（启用/禁用）
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 权限管理
+- 角色列表管理
+- 权限分配与控制
+- 权限树形结构展示
 
-### `npm run build`
+### 新闻管理
+- 新闻草稿箱
+- 新闻分类管理
+- 新闻撰写（富文本编辑器）
+- 新闻预览
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 审核管理
+- 新闻审核流程
+- 审核列表
+- 审核状态追踪
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 发布管理
+- 待发布新闻
+- 已发布新闻
+- 已下线新闻
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 前台展示
+- 新闻分类浏览
+- 新闻详情页
+- 新闻点赞、浏览量统计
 
-### `npm run eject`
+## 项目结构
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+├── public/                 # 静态资源
+├── src/                    # 源代码
+│   ├── components/         # 公共组件
+│   │   ├── news-manage/    # 新闻管理组件
+│   │   ├── publish-manage/ # 发布管理组件
+│   │   ├── sandbox/        # 后台框架组件
+│   │   └── user-manage/    # 用户管理组件
+│   ├── redux/              # Redux状态管理
+│   │   ├── reducers/       # Reducer定义
+│   │   └── store.js        # Redux存储配置
+│   ├── router/             # 路由配置
+│   ├── util/               # 工具函数
+│   └── views/              # 页面视图
+│       ├── login/          # 登录页
+│       ├── news/           # 新闻前台页面
+│       └── sandbox/        # 后台管理页面
+├── db.json                 # JSON Server数据库文件
+└── package.json           # 项目依赖配置
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 安装与运行
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 环境要求
+- Node.js 14.0+
+- npm 6.0+
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 安装依赖
+```bash
+npm install
+```
 
-## Learn More
+### 启动开发服务器
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 启动模拟后端服务
+```bash
+npm run server
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 构建生产版本
+```bash
+npm run build
+```
 
-### Code Splitting
+## 用户角色与权限
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+系统包含三种用户角色，每种角色拥有不同的权限：
 
-### Analyzing the Bundle Size
+1. **超级管理员**：拥有系统所有功能的访问权限，可以管理所有用户和内容。
+2. **区域管理员**：可以管理指定区域的用户和新闻内容，具有审核权限。
+3. **区域编辑**：只能创建和管理自己的新闻内容，无法管理用户。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 数据流程
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. 编辑撰写新闻并保存为草稿
+2. 编辑提交新闻审核
+3. 管理员审核新闻
+4. 审核通过的新闻进入待发布状态
+5. 发布新闻后在前台展示
+6. 可将已发布新闻下线
